@@ -34,4 +34,29 @@ body{
   vertical-align: bottom;
   padding: 30px;
   text-align: center;
+  margin: 20px;
+}
+
+.date{
+  text-align: right;
+  margin: -20px;
+}
+
+.user{
+  margin: -5px;
+}
+.sharksforcheap{
+  color: blue;
+}
+
+.douglascalhoun{
+  color: red;
+}
+
+.mracus{
+  color: green;
+}
+
+.shawndrost{
+  color: orange;
 }
