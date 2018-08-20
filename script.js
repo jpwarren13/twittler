@@ -1,4 +1,5 @@
           var state = 1;
+          
           var $body = $('body');
           var streamTweets = function(){
             //Sort the streams by date made
@@ -26,43 +27,53 @@
 
           $tweetBody.appendTo($body);
         }
+
+        //tTimeout(streamTweets,2000);
    
       };      
 
 
 
+var toggleUser = function(){
 
-
-
-
-      $(document).ready(function(){
-       setInterval(streamTweets(), 3000);
-       $(".shawndrost").click(function(){
+          $(".shawndrost").click(function(){
           $(".sharksforcheap").parent().slideToggle();
           $(".douglascalhoun").parent().slideToggle();
           $(".mracus").parent().slideToggle();
-     })
+     });
         $(".sharksforcheap").click(function(){
 
           $(".shawndrost").parent().slideToggle();
           $(".douglascalhoun").parent().slideToggle();
           $(".mracus").parent().slideToggle();
 
-       })
+       });
         $(".douglascalhoun").click(function(){
 
           $(".sharksforcheap").parent().slideToggle();
           $(".shawndrost").parent().slideToggle();
           $(".mracus").parent().slideToggle();
 
-       })
+       });
         $(".mracus").click(function(){
 
           $(".sharksforcheap").parent().slideToggle();
           $(".douglascalhoun").parent().slideToggle();
           $(".shawndrost").parent().slideToggle();
 
+       });
+      }
+
+
+
+      $(document).ready(function(){
+        streamTweets();
+        toggleUser();
+       $("button").click(function() {
+          streamTweets();
+          toggleUser();
        })
+
 
        // $body.html('');
 
